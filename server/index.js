@@ -46,12 +46,11 @@ app.use("/api/product", require("./routes/product"));
 //     res.sendFile(path.resolve(__dirname, "../client", "build", "index.html"));
 //   });
 // }
-
+app.use('/', (req, res, next) => {
+  return res.json({status: "Testinvg success"});
+})
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
   console.log(`Server Running at ${port}`);
 });
-app.use('/', (req, res, next) => {
-  return res.json({status: "Testinvg success"});
-})
