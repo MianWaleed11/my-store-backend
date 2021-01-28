@@ -16,7 +16,7 @@ const config = require("./config/key");
 
 const mongoose = require("mongoose");
 const connect = mongoose
-  .connect("mongodb+srv://waleed:12345@nodestore.1py5h.mongodb.net/<nodeStore>?retryWrites=true&w=majority", {
+  .connect("mongodb+srv://waleed:12345@cluster0.vfizp.mongodb.net/my-store?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })

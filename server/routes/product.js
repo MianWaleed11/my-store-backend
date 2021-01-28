@@ -128,6 +128,7 @@ router.get("/products_by_id", async (req, res) => {
   //     return res.status(200).send(product);
   //   });
   const product = await Product.find({_id: {$in: productIds}});
+  console.log('find',product);
   return res.json(product)
 });
 
